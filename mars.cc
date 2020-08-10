@@ -370,7 +370,7 @@ int main(int argc, char **argv)
 			unsigned int m = strlen ( ( char * ) seq[i] );
 			rotation = ( unsigned char * ) calloc ( m + 1, sizeof ( unsigned char ) );
 			create_rotation ( seq[i], Rot[i], rotation );
-			fprintf( out_fd, ">%s\n", seq_id[i] );
+			fprintf( out_fd, ">%s (rotated %d bases)\n", seq_id[i], Rot[i] );
 			fprintf( out_fd, "%s\n", rotation );
 			free ( rotation );
 		}		
